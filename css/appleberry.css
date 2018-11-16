@@ -121,9 +121,9 @@ header {
     font-weight: bold;
     margin-bottom: 0; }
   #main_area .sidebar h3.categories_title {
-    background-image: url(../images/top/next_icon.png);
+    background-image: url(../images/top/down_icon.png);
     background-repeat: no-repeat;
-    background-position: right center; }
+    background-position: 192px center; }
   #main_area .sidebar a.pagelink {
     background-color: #887f69;
     color: white;
@@ -136,13 +136,19 @@ header {
     display: block;
     background-image: url(../images/top/next_icon.png);
     background-repeat: no-repeat;
-    background-position: right center; }
+    background-position: 197px center; }
   #main_area .sidebar .search-box {
     padding: 20px;
-    background-color: white; }
+    background-color: white;
+    margin-bottom: 5px; }
     #main_area .sidebar .search-box p {
       color: #887f69;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin-bottom: 0; }
+    #main_area .sidebar .search-box ::placeholder {
+      color: #ccc; }
   #main_area .sidebar .categories_li {
     margin-bottom: 5px; }
     #main_area .sidebar .categories_li li {
@@ -152,7 +158,7 @@ header {
       margin-bottom: 0;
       background-image: url(../images/top/next_icon_gray.png);
       background-repeat: no-repeat;
-      background-position: right center; }
+      background-position: 197px center; }
       #main_area .sidebar .categories_li li a.categories {
         display: block;
         text-decoration: none;
@@ -225,6 +231,9 @@ header {
 @media (max-width: 550px) {
   .shopping_guide {
     flex-direction: column; } }
+img.u-max-full-width.cate_image_pc {
+  width: 100%; }
+
 @media (min-width: 551px) {
   img.u-max-full-width.cate_image_sp {
     display: none; } }
@@ -436,7 +445,8 @@ footer {
     transition: opacity .2s ease;
     border-radius: 30px; }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
   background: #9d1a2d; }
 
 .clearfix::after {
