@@ -40,18 +40,18 @@
     <div id="header_in" class="container">
       <div class="row">
         <div class="seven columns logo">
-          <img class="u-max-full-width" src="images/top_sp/logo.png" alt="APPLE BERRY" src set="images/top_sp/logo@2x.png 2x" />
+          <img class="u-max-full-width" src="images/top/logo.png" alt="APPLE BERRY" srcset="images/top/logo@2x.png 2x" />
         </div>
         <div class="five columns navi">
 
           <ul class="sp_navi">
-            <li><a href="https://web.facebook.com/FacebookAfrica/"><img class="u-max-full-width" src="images/top_sp/fb.png" alt="facebook" src set="images/top_sp/fb@2x.png 2x" /></a></li>
-            <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/insta.png" alt="instagram" src set="images/top_sp/insta@2x.png 2x" /></a></li>
-            <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/menu_icon.png" alt="menu" src set="images/top_sp/menu_icon@2x.png 2x" /></a></li>
+            <li><a href="https://web.facebook.com/FacebookAfrica/"><img class="u-max-full-width" src="images/top_sp/fb.png" alt="facebook" srcset="images/top_sp/fb@2x.png 2x" /></a></li>
+            <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/insta.png" alt="instagram" srcset="images/top_sp/insta@2x.png 2x" /></a></li>
+            <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/menu_icon.png" alt="menu" srcset="images/top_sp/menu_icon@2x.png 2x" /></a></li>
           </ul>
           <ul class="sp_navi_list">
             <li><a href="">LOGIN</a></li>
-            <li><a href="">CART</a></a>
+            <li><a href="">CART</a>
             </li>
             <li><a href="">MY PAGE</a></li>
             <li><a href="">SHOPPING GUIDE</a></li>
@@ -65,12 +65,13 @@
           <div class="pc_navi">
             <ul class="pc_navi_li">
               <li><a href="">LOGIN</a></li>
-              <li><a href="">CART</a></a>
+              <li><a href="">CART</a>
               </li>
               <li><a href="">MY PAGE</a></li>
               <li><a href="">SHOPPING GUIDE</a></li>
-              <li><a href="https://web.facebook.com/FacebookAfrica/"><img class="u-max-full-width" src="images/top_sp/fb.png" alt="facebook" src set="images/top_sp/fb@2x.png 2x" /></a></li>
-              <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/insta.png" alt="instagram" src set="images/top_sp/insta@2x.png 2x" /></a></l </ul>
+              <li><a href="https://web.facebook.com/FacebookAfrica/"><img class="u-max-full-width" src="images/top_sp/fb.png" alt="facebook" srcset="images/top_sp/fb@2x.png 2x" /></a></li>
+              <li><a href="https://www.instagram.com/?hl=ja"><img class="u-max-full-width" src="images/top_sp/insta.png" alt="instagram" srcset="images/top_sp/insta@2x.png 2x" /></a></li>
+          </ul>
           </div>
 
 
@@ -100,21 +101,27 @@
               </div>
               <div class="clearfix">
                 <ul id=list_image>
-                  <li><img src="images/products/pro_img_01.jpg" alt="商品" </li>
-                    <li><img src="images/products/pro_img_02.jpg" alt="商品" </li>
-                      <li><img src="images/products/pro_img_03.jpg" alt="商品" </li>
-                        <li><img src="images/products/pro_img_04.jpg" alt="商品" </li>
-                          <li><img src="images/products/pro_img_05.jpg" alt="商品" </li>
-                            <li><img src="images/products/gray_pro_img.jpg" alt="商品" </li>
-                              <li><img src="images/products/gray_pro_img.jpg" alt="商品" </li>
-                                <li><img src="images/products/gray_pro_img.jpg" alt="商品" </li>
-                                  <li><img src="images/products/gray_pro_img.jpg" alt="商品" </li>
-                                    <li><img src="images/products/gray_pro_img.jpg" alt="商品" </li>
+                  <li><img src="images/products/pro_img_01.jpg" alt="商品"></li>
+                    <li><img src="images/products/pro_img_02.jpg" alt="商品"></li>
+                      <li><img src="images/products/pro_img_03.jpg" alt="商品"></li>
+                        <li><img src="images/products/pro_img_04.jpg" alt="商品"></li>
+                          <li><img src="images/products/pro_img_05.jpg" alt="商品"></li>
+                            <li><img src="images/products/gray_pro_img.jpg" alt="商品"></li>
+                              <li><img src="images/products/gray_pro_img.jpg" alt="商品"></li>
+                                <li><img src="images/products/gray_pro_img.jpg" alt="商品"></li>
+                                  <li><img src="images/products/gray_pro_img.jpg" alt="商品"></li>
+                                    <li><img src="images/products/gray_pro_img.jpg" alt="商品"></li>
                 </ul>
+<script>$(window).load(function(){
+  $("#list_image img").click(function(){
+    var img_src = $(this).attr("src");
+    $("#display_image img").attr("src", img_src);
+  });
+});</script>
 </div>
                 <div class="clearfix">
                   <div class="product_info">
-                    <img src="images/products/title_color.png" art="COLOR">
+                    <img src="images/products/title_color.png" alt="COLOR">
                     <table>
                       <tr>
                         <th></th>
@@ -133,12 +140,12 @@
               <div class="clearfix">
                 <div class="flexbox">
                 <div class="product_info">
-                  <img src="images/products/title_price.png" art="Price">
-                  <span>￥1,000</span>(Tax in)
+                  <img src="images/products/title_price.png" alt="Price">
+                  <div class="price">￥1,000<span>(Tax in)</span></div>
                 </div>
                 
                 <div class="product_info">
-                  <img src="images/products/title_quantity.png" art="Quantity">
+                  <img src="images/products/title_quantity.png" alt="Quantity">
                   <input class="quantity" type="text">
                 </div>
                 </div>
@@ -174,12 +181,12 @@
           </table>
         </div>
       </div>
-
+</div>
 
  
 
-      <h2><img src="images/list/title_recent_pro.png" alt="最近見た商品"></h2>
-
+      <h2 class="title_pc"><img src="images/list/recent_pro_pc.png" alt="最近見た商品"></h2>
+      <h2 class="title_sp"><img src="images/list/title_recent_pro.png" alt="最近見た商品"></h2>
       <div class="clearfix">
         <div class="item">
           <img class="u-max-full-width" src="images/top/item_10.jpg" alt="New item">
@@ -194,7 +201,8 @@
           <p>商品名が入ります商品名が入ります商品名が入ります<br><br>￥10,000 (tax in)</p>
         </div>
       </div>
-      <h2>SHOPPING GUIDE</h2>
+      <h2 class="title_pc"><img class="u-max-full-width" src="images/top/title_guide.png" alt="Shopping Guide"></h2>
+      <h2 class="title_sp"><img class="u-max-full-width" src="images/top_sp/title_guide.png" alt="Shopping Guide"></h2>
       <div class="shopping_guide">
         <div class="otodoke">
           <div class="otodoke_title">お届けについて</div>
@@ -215,7 +223,7 @@
           </p>
         </div>
       </div>
-      </div>
+      
       </div>
 
 
@@ -227,7 +235,7 @@
       </div>
       <a class="pagelink" href="">ページリンク</a>
       <div class="categories">
-        <h3>CATEGORIES</h3>
+        <h3 class="categories_title">CATEGORIES</h3>
         <ul class="categories_li">
           <li><a class="categories" href="">カテゴリー名</a></li>
           <li><a class="categories" href="">カテゴリー名</a></li>
@@ -255,7 +263,7 @@
   </div>
   </div>
   </div>
-  </div>
+
 
   <footer>
     <div class="page_top">

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%; }
 
@@ -79,16 +80,25 @@ header {
   background-color: #f9f8f6;
   font-size: 11px;
   font-size: 1.1rem; }
-  #main_area h2 {
-    color: #887f69;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 0.2rem;
+  #main_area .title {
     margin: 10px 0; }
+  @media (max-width: 550px) {
+    #main_area h2.title_pc {
+      display: none; }
+    #main_area h2.title_sp {
+      padding: 20px 0;
+      margin: 0;
+      clear: both; }
+      #main_area h2.title_sp img {
+        display: block;
+        margin: 0 auto; } }
+  @media (min-width: 551px) {
+    #main_area h2.title_sp {
+      display: none; }
+    #main_area h2.title_pc {
+      clear: both; } }
   #main_area .item {
-    width: 42%;
+    width: 45%;
     float: left;
     background-color: white;
     padding: 5px;
@@ -101,7 +111,7 @@ header {
       margin-bottom: 0; }
   @media (min-width: 551px) {
     #main_area .item {
-      width: 30%; } }
+      width: 31.5%; } }
   #main_area .sidebar h3 {
     background-color: #887f69;
     color: white;
@@ -110,6 +120,10 @@ header {
     padding: 10px;
     font-weight: bold;
     margin-bottom: 0; }
+  #main_area .sidebar h3.categories_title {
+    background-image: url(../images/top/next_icon.png);
+    background-repeat: no-repeat;
+    background-position: right center; }
   #main_area .sidebar a.pagelink {
     background-color: #887f69;
     color: white;
@@ -119,7 +133,10 @@ header {
     padding: 10px;
     margin-bottom: 5px;
     text-decoration: none;
-    display: block; }
+    display: block;
+    background-image: url(../images/top/next_icon.png);
+    background-repeat: no-repeat;
+    background-position: right center; }
   #main_area .sidebar .search-box {
     padding: 20px;
     background-color: white; }
@@ -148,7 +165,8 @@ header {
       text-align: center; }
     #main_area .sidebar .about img.more {
       text-align: center;
-      margin-bottom: 10px; }
+      display: block;
+      margin: 0px auto 10px; }
   #main_area .sidebar .shopinfo {
     background-color: white; }
     #main_area .sidebar .shopinfo img.u-max-full-width {
@@ -156,7 +174,8 @@ header {
       text-align: center; }
     #main_area .sidebar .shopinfo img.more {
       text-align: center;
-      margin-bottom: 10px; }
+      display: block;
+      margin: 0px auto 10px; }
 
 @media (max-width: 550px) {
   .about img.u-max-full-width {
@@ -240,34 +259,39 @@ header {
 
 @media (min-width: 551px) {
   .product .product_title {
-    padding: 20px 0 30px 0; }
+    padding: 20px 0 20px 0;
+    height: 30px; }
     .product .product_title .product_name {
       width: 500px;
       display: flex;
       float: left; }
     .product .product_title span.product_code {
-      padding: 20px 0; } }
+      padding: 10px 0;
+      vertical-align: bottom;
+      display: block; } }
 #display_image {
   float: left;
-  width: 400px; }
+  width: 400px;
+  margin-right: 7px; }
   #display_image img {
     width: 100%; }
 
 #list_image {
-  width: 160px;
+  width: 155px;
   list-style: none;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap; }
   #list_image li {
-    width: 40%;
-    margin: 2px; }
+    width: 49%;
+    margin: 0px 0px 0px; }
     #list_image li img {
       width: 100%;
       cursor: pointer; }
 
 @media (max-width: 550px) {
   #display_image {
-    width: 280px; }
+    width: 100%; }
 
   #list_image {
     width: 100%; }
@@ -276,7 +300,8 @@ header {
       width: 18.5%; } }
 .product_info {
   padding: 10px 0;
-  border-bottom: 1px solid #e8e4da; }
+  border-bottom: 1px solid #e8e4da;
+  margin-bottom: 10px; }
   .product_info img {
     padding: 10px 0; }
   .product_info #list_image li {
@@ -295,19 +320,25 @@ header {
     .product_info table th {
       background-color: #f9f8f6;
       color: #887f69; }
-  .product_info span {
+  .product_info .price {
+    display: inline-block;
     padding-left: 50px;
     padding-right: 5px;
     font-size: 20px;
     font-size: 2rem;
     color: #e80f66;
-    font-style: italic; }
+    font-style: italic;
+    vertical-align: top; }
+    .product_info .price span {
+      font-size: 13px;
+      font-size: 1.3rem;
+      padding-left: 5px;
+      color: #000000; }
   .product_info input.quantity {
     margin-left: 30px; }
 
 .add_to_cart {
-  text-align: center;
-  padding: 10px 0; }
+  text-align: center; }
 
 @media (min-width: 551px) {
   .product_info {
@@ -319,6 +350,8 @@ header {
     float: left; }
     .flexbox .add_to_cart {
       display: flex; }
+      .flexbox .add_to_cart img.add_to_cart {
+        padding: 0; }
 
   .product_explain {
     border-top: 1px solid #e8e4da; } }
@@ -395,7 +428,7 @@ footer {
     background: #9d1a2d; }
   .owl-theme .owl-dots .owl-dot span {
     width: 25px;
-    height: 5px;
+    height: 3px;
     margin: 2px 7px;
     background: #D6D6D6;
     display: block;
@@ -410,5 +443,29 @@ footer {
   content: '';
   display: block;
   clear: both; }
+
+.search-box input[type="text"] {
+  width: 170px;
+  /*横幅*/
+  margin-bottom: 0px;
+  /*スペース*/
+  border-radius: 0;
+  /*角丸*/
+  border: 0;
+  /*枠線*/
+  font-size: 11px;
+  /*文字サイズ*/
+  font-size: 1.1rem;
+  /*文字サイズ*/
+  background-color: #eee;
+  /*外形の色*/
+  background-image: url(../images/top/search_icon.png);
+  /*背景の虫メガネ画像*/
+  background-position: 95% center;
+  /*背景のポジション*/
+  background-repeat: no-repeat;
+  /*背景の画像のリピート設定*/
+  font-style: italic;
+  /*フォントのスタイル*/ }
 
 /*# sourceMappingURL=appleberry.css.map */
