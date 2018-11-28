@@ -25,14 +25,20 @@ header {
     background: $beige1;
 
     #header_in {
-        padding-top: 20px;
+        padding-top: 25px;
 
         .logo {
             padding-bottom: 10px;
             text-align: center;
 
+
             @media (min-width: 551px) {
                 text-align: left;
+                padding: 0 0 10px 0;
+                img {
+                    width: 30%;
+                }
+
             }
         }
 
@@ -50,12 +56,12 @@ header {
 
         .sp_menu_toggle {
             list-style: none;
-            background-color: $brown1;
-            width: 40%;
+            background-color: #ff6d77;
+            width: 98%;
             position: right;
             display: none;
             position: absolute;
-            right: 2%;
+            left: 1%;
 
             z-index: 100;
 
@@ -102,11 +108,13 @@ header {
 
 
         .pc_navi {
-            margin-top: 50px;
+            margin-top: 10px;
+            text-align: right;
 
             li {
                 list-style: none;
                 display: inline-block;
+
                 margin-bottom: 0;
                 padding-bottom: 0;
 
@@ -114,8 +122,9 @@ header {
                     color: $brown1;
                     font-weight: bold;
                     text-decoration: none;
-                    padding-right: 8px;
+
                     font-size: 13px;
+                    padding: 5px;
                 }
             }
 
@@ -184,7 +193,7 @@ header {
 
     @media (min-width: 551px) {
         .item {
-            width: 31.5%;
+            width: 31.644%;
         }
     }
     .sidebar {
@@ -201,7 +210,7 @@ header {
         h3.categories_title {
             background-image: url(../images/top/down_icon.png);
             background-repeat: no-repeat;
-            background-position: 192px center;
+            background-position: right 10px center;
 
         }
 
@@ -216,7 +225,7 @@ header {
             display: block;
             background-image: url(../images/top/next_icon.png);
             background-repeat: no-repeat;
-            background-position: 197px center;
+            background-position: right 10px center;
         }
 
         .search-box {
@@ -256,35 +265,56 @@ header {
                     display: block;
                     text-decoration: none;
                     padding: 10px;
-                    color: $brown1;
+                    color: black;
                 }
             }
         }
 
+        @media (max-width: 550px) {
+            h3.categories_title {
+                background-position: 260px;
+            }
+
+            a.pagelink {
+                background-position: 265px;
+            }
+
+            .categories_li li {
+                background-position: 265px
+            }
+        }
 
         .about {
             background-color: white;
             img.u-max-full-width {
-                margin: 5px;
+                padding: 10px 0px 0 10px;
                 text-align: center;
+            }
+            .text {
+                margin: 0 10px;
             }
             img.more {
                 text-align: center;
                 display: block;
                 margin: 0px auto 10px;
+                padding-bottom: 25px;
             }
         }
 
         .shopinfo {
             background-color: white;
             img.u-max-full-width {
-                margin: 5px;
+                margin: 10px 10px 0 10px;
                 text-align: center;
+            }
+            .text {
+                margin: 10px 10px 0px 10%;
             }
             img.more {
                 text-align: center;
                 display: block;
                 margin: 0px auto 10px;
+                padding-bottom: 25px;
             }
         }
     }
@@ -292,16 +322,25 @@ header {
 
 @media (max-width: 550px) {
     .about {
+        display: flex;
+        .left_about{
+         width: 49%;   
+        
         img.u-max-full-width {
-            width: 50%;
+            width: 100%;
             display: inline-block;
             vertical-align: top;
         }
+        }
 
         .text {
-            width: 40%;
+            width: 41.5%;
             display: inline-block;
-            margin-left: 5px;
+            margin: 0;
+
+            p {
+                margin: 10px 0;
+            }
 
         }
 
@@ -309,32 +348,40 @@ header {
     }
 
     .shopinfo {
+        display:flex;
+        .left_shopimg{
+            width: 44%;    
+        
         img.u-max-full-width {
-            width: 50%;
+            width: 100%;
             display: inline-block;
             vertical-align: top;
+            }
         }
 
         .text {
-            width: 40%;
+            width: 41.5%;
             display: inline-block;
             margin-left: 5px;
+            p{
+                margin-bottom:10px;
+            }
         }
     }
 }
 
 .shopping_guide {
     display: flex;
-
+    justify-content: space-between;
 
 
     .otodoke {
         background-color: white;
-        padding: 10px;
+        padding: 13px;
         margin-bottom: 5px;
-        margin-right: 5px;
         display: inline-block;
         vertical-align: top;
+
 
 
         .otodoke_title {
@@ -394,10 +441,12 @@ img.u-max-full-width.cate_image_pc {
     padding: 10px;
     background-image: url(../images/list/home_icon.png);
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 10px center;
     margin-bottom: 10px;
+    padding-left: 30px;
     a {
-        margin-left: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
         text-decoration: none;
         color: $brown1;
     }
@@ -406,8 +455,59 @@ img.u-max-full-width.cate_image_pc {
 }
 
 
+//list.html-----------------------------------------
+.back-button {
+    background-color: $brown1;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 25px 0;
+    display: inline-block;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        @include fontsize(15);
+        height: 40px;
+        line-height: 40px;
+
+
+    }
+}
+
+.next-button {
+    background-color: $brown1;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 25px 0;
+    display: inline-block;
+    float: right;
+
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        @include fontsize(15);
+        height: 40px;
+        line-height: 40px;
+
+    }
+}
+
+
+
+//list.html(end)------------------------------------------
+
+
+//product.html--------------------------------------
 .product {
     background-color: white;
+
     .product_title {
         padding: 10px 0;
         border-bottom: 1px solid $beige2;
@@ -428,7 +528,6 @@ img.u-max-full-width.cate_image_pc {
 
 @media (min-width: 551px) {
     .product {
-
 
         .product_title {
             padding: 20px 0 20px 0;
@@ -454,7 +553,7 @@ img.u-max-full-width.cate_image_pc {
 
 #display_image {
     float: left;
-    width: 400px;
+    width: 418px;
     margin-right: 7px;
     img {
         width: 100%;
@@ -462,7 +561,7 @@ img.u-max-full-width.cate_image_pc {
 }
 
 #list_image {
-    width: 155px;
+    width: 163px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -528,6 +627,11 @@ img.u-max-full-width.cate_image_pc {
             border: 1px solid $beige2;
             text-align: center;
             padding: 5px;
+            input[type="checkbox"], input[type="radio"]{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                
+            }
 
         }
         th {
@@ -637,12 +741,12 @@ img.u-max-full-width.cate_image_pc {
 @media (min-width: 551px) {
     .product {
         padding: 0 60px;
-        width: 80%;
+
         margin: auto;
     }
 }
 
-//main_area_product
+//main_area_product--------------------------------------
 footer {
     background-color: $beige1;
 
@@ -688,9 +792,12 @@ footer {
 
     text-align: left;
 
+
     button.owl-dot .active span {
         background: #9d1a2d;
     }
+
+
 
     .owl-dot span {
         width: 25px;
@@ -707,6 +814,10 @@ footer {
     }
 }
 
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0;
+}
+
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
     background: #9d1a2d;
@@ -720,7 +831,7 @@ footer {
 }
 
 .search-box input[type="text"] {
-    width: 170px;
+    width: 100%;
     /*横幅*/
     margin-bottom: 0px;
     /*スペース*/
