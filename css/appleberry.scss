@@ -177,10 +177,11 @@ header {
     }
 
     .item {
-        width: 45%;
+        width: 49%;
         float: left;
         background-color: white;
-        padding: 5px;
+        padding: 8px 8px 15px 8px;
+        box-sizing: border-box;
         margin: 1px;
         display: flex;
         flex-direction: column;
@@ -188,12 +189,16 @@ header {
 
         p {
             margin-bottom: 0;
+            padding-top: 10px;
         }
     }
 
     @media (min-width: 551px) {
         .item {
-            width: 31.644%;
+            width: 33%;
+            padding: 10px 10px 20px 10px;
+            box-sizing: border-box;
+
         }
     }
     .sidebar {
@@ -220,7 +225,7 @@ header {
             @include fontsize(14);
             font-weight: bold;
             padding: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-decoration: none;
             display: block;
             background-image: url(../images/top/next_icon.png);
@@ -231,7 +236,7 @@ header {
         .search-box {
             padding: 20px;
             background-color: white;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             p {
                 color: $brown1;
                 font-weight: bold;
@@ -245,10 +250,21 @@ header {
             }
 
         }
+@media (max-width: 550px){
+    .search-box{
+        padding: 0 20px 20px 20px;
+    
+    p{
+        img{
+            display: none;
+        }
+    }
+}
+}
 
 
         .categories_li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
 
             li {
                 background-color: white;
@@ -257,14 +273,14 @@ header {
                 margin-bottom: 0;
                 background-image: url(../images/top/next_icon_gray.png);
                 background-repeat: no-repeat;
-                background-position: 197px center;
+                background-position: right 10px center;
 
 
 
                 a.categories {
                     display: block;
                     text-decoration: none;
-                    padding: 10px;
+                    padding: 15px 10px;
                     color: black;
                 }
             }
@@ -287,42 +303,64 @@ header {
         .about {
             background-color: white;
             img.u-max-full-width {
-                padding: 10px 0px 0 10px;
+                padding: 10px;
                 text-align: center;
             }
             .text {
                 margin: 0 10px;
+                P{
+                    margin-bottom: 0;
+                }
             }
             img.more {
                 text-align: center;
                 display: block;
                 margin: 0px auto 10px;
-                padding-bottom: 25px;
+                padding: 20px 0;
             }
         }
+@media (max-width: 550px){
+    .about{
+        img.u-max-full-width{
+             padding: 10px 0px 0 10px;
+        }
+    }
+}
 
         .shopinfo {
             background-color: white;
             img.u-max-full-width {
-                margin: 10px 10px 0 10px;
+                padding: 10px;
                 text-align: center;
             }
             .text {
-                margin: 10px 10px 0px 10%;
+                margin: 0 10px;
+                p{
+                    margin-bottom: 0;
+                }
             }
             img.more {
                 text-align: center;
                 display: block;
                 margin: 0px auto 10px;
-                padding-bottom: 25px;
+                padding: 20px 0;
             }
         }
+        @media (max-width: 550px){
+    .shopinfo{
+        img.u-max-full-width{
+             padding: 10px 0px 0 10px;
+        }
+    }
+}
+        
     }
 }
 
 @media (max-width: 550px) {
     .about {
         display: flex;
+        margin-bottom: 10px;
         .left_about{
          width: 49%;   
         
@@ -350,7 +388,7 @@ header {
     .shopinfo {
         display:flex;
         .left_shopimg{
-            width: 44%;    
+            width: 49%;    
         
         img.u-max-full-width {
             width: 100%;
@@ -364,7 +402,7 @@ header {
             display: inline-block;
             margin-left: 5px;
             p{
-                margin-bottom:10px;
+                margin:10px 0;
             }
         }
     }
@@ -378,7 +416,7 @@ header {
     .otodoke {
         background-color: white;
         padding: 13px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         display: inline-block;
         vertical-align: top;
 
@@ -392,7 +430,7 @@ header {
         }
         img {
             display: block;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
         span {
             color: $brown1;
@@ -439,6 +477,7 @@ img.u-max-full-width.cate_image_pc {
 .breadcrumb {
     background-color: $beige2;
     padding: 10px;
+    border-radius:3px;
     background-image: url(../images/list/home_icon.png);
     background-repeat: no-repeat;
     background-position: 10px center;
@@ -462,7 +501,7 @@ img.u-max-full-width.cate_image_pc {
     height: 40px;
     text-align: center;
     vertical-align: middle;
-    margin: 25px 0;
+    margin: 20px 0;
     display: inline-block;
 
     a {
@@ -483,7 +522,7 @@ img.u-max-full-width.cate_image_pc {
     height: 40px;
     text-align: center;
     vertical-align: middle;
-    margin: 25px 0;
+    margin: 20px 0;
     display: inline-block;
     float: right;
 
@@ -553,15 +592,16 @@ img.u-max-full-width.cate_image_pc {
 
 #display_image {
     float: left;
-    width: 418px;
-    margin-right: 7px;
+    width: 70%;
+    margin-right: 10px;
+   
     img {
         width: 100%;
     }
 }
 
 #list_image {
-    width: 163px;
+    
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -569,8 +609,8 @@ img.u-max-full-width.cate_image_pc {
 
 
     li {
-        width: 49%;
-        margin: 0px 0px 0px;
+        width: 45%;
+        margin: 0 auto 5px;
         img {
             width: 100%;
             cursor: pointer;
@@ -586,6 +626,7 @@ img.u-max-full-width.cate_image_pc {
     }
     #list_image {
         width: 100%;
+        max-width: 280px;
         li {
             display: inline-block;
             width: 18.5%;
@@ -698,7 +739,7 @@ img.u-max-full-width.cate_image_pc {
 
 .product_explain {
     margin-bottom: 20px;
-    padding: 20px 0;
+    padding: 20px 0 50px 0;
 
     .product_explain_title {
         color: $brown1;

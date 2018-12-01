@@ -102,20 +102,24 @@ header {
     #main_area h2.title_pc {
       clear: both; } }
   #main_area .item {
-    width: 45%;
+    width: 49%;
     float: left;
     background-color: white;
-    padding: 5px;
+    padding: 8px 8px 15px 8px;
+    box-sizing: border-box;
     margin: 1px;
     display: flex;
     flex-direction: column;
     font-size: 11px;
     font-size: 1.1rem; }
     #main_area .item p {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding-top: 10px; }
   @media (min-width: 551px) {
     #main_area .item {
-      width: 31.644%; } }
+      width: 33%;
+      padding: 10px 10px 20px 10px;
+      box-sizing: border-box; } }
   #main_area .sidebar h3 {
     background-color: #887f69;
     color: white;
@@ -135,7 +139,7 @@ header {
     font-size: 1.4rem;
     font-weight: bold;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-decoration: none;
     display: block;
     background-image: url(../images/top/next_icon.png);
@@ -144,7 +148,7 @@ header {
   #main_area .sidebar .search-box {
     padding: 20px;
     background-color: white;
-    margin-bottom: 5px; }
+    margin-bottom: 10px; }
     #main_area .sidebar .search-box p {
       color: #887f69;
       font-weight: bold;
@@ -153,8 +157,13 @@ header {
       margin-bottom: 0; }
     #main_area .sidebar .search-box ::placeholder {
       color: #ccc; }
+  @media (max-width: 550px) {
+    #main_area .sidebar .search-box {
+      padding: 0 20px 20px 20px; }
+      #main_area .sidebar .search-box p img {
+        display: none; } }
   #main_area .sidebar .categories_li {
-    margin-bottom: 5px; }
+    margin-bottom: 10px; }
     #main_area .sidebar .categories_li li {
       background-color: white;
       list-style: none;
@@ -162,11 +171,11 @@ header {
       margin-bottom: 0;
       background-image: url(../images/top/next_icon_gray.png);
       background-repeat: no-repeat;
-      background-position: 197px center; }
+      background-position: right 10px center; }
       #main_area .sidebar .categories_li li a.categories {
         display: block;
         text-decoration: none;
-        padding: 10px;
+        padding: 15px 10px;
         color: black; }
   @media (max-width: 550px) {
     #main_area .sidebar h3.categories_title {
@@ -178,31 +187,42 @@ header {
   #main_area .sidebar .about {
     background-color: white; }
     #main_area .sidebar .about img.u-max-full-width {
-      padding: 10px 0px 0 10px;
+      padding: 10px;
       text-align: center; }
     #main_area .sidebar .about .text {
       margin: 0 10px; }
+      #main_area .sidebar .about .text P {
+        margin-bottom: 0; }
     #main_area .sidebar .about img.more {
       text-align: center;
       display: block;
       margin: 0px auto 10px;
-      padding-bottom: 25px; }
+      padding: 20px 0; }
+  @media (max-width: 550px) {
+    #main_area .sidebar .about img.u-max-full-width {
+      padding: 10px 0px 0 10px; } }
   #main_area .sidebar .shopinfo {
     background-color: white; }
     #main_area .sidebar .shopinfo img.u-max-full-width {
-      margin: 10px 10px 0 10px;
+      padding: 10px;
       text-align: center; }
     #main_area .sidebar .shopinfo .text {
-      margin: 10px 10px 0px 10%; }
+      margin: 0 10px; }
+      #main_area .sidebar .shopinfo .text p {
+        margin-bottom: 0; }
     #main_area .sidebar .shopinfo img.more {
       text-align: center;
       display: block;
       margin: 0px auto 10px;
-      padding-bottom: 25px; }
+      padding: 20px 0; }
+  @media (max-width: 550px) {
+    #main_area .sidebar .shopinfo img.u-max-full-width {
+      padding: 10px 0px 0 10px; } }
 
 @media (max-width: 550px) {
   .about {
-    display: flex; }
+    display: flex;
+    margin-bottom: 10px; }
     .about .left_about {
       width: 49%; }
       .about .left_about img.u-max-full-width {
@@ -219,7 +239,7 @@ header {
   .shopinfo {
     display: flex; }
     .shopinfo .left_shopimg {
-      width: 44%; }
+      width: 49%; }
       .shopinfo .left_shopimg img.u-max-full-width {
         width: 100%;
         display: inline-block;
@@ -229,14 +249,14 @@ header {
       display: inline-block;
       margin-left: 5px; }
       .shopinfo .text p {
-        margin-bottom: 10px; } }
+        margin: 10px 0; } }
 .shopping_guide {
   display: flex;
   justify-content: space-between; }
   .shopping_guide .otodoke {
     background-color: white;
     padding: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     display: inline-block;
     vertical-align: top; }
     .shopping_guide .otodoke .otodoke_title {
@@ -247,7 +267,7 @@ header {
       padding: 10px; }
     .shopping_guide .otodoke img {
       display: block;
-      margin-bottom: 10px; }
+      margin: 10px 0; }
     .shopping_guide .otodoke span {
       color: #887f69;
       font-weight: bold; }
@@ -272,6 +292,7 @@ img.u-max-full-width.cate_image_pc {
 .breadcrumb {
   background-color: #e8e4da;
   padding: 10px;
+  border-radius: 3px;
   background-image: url(../images/list/home_icon.png);
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -289,7 +310,7 @@ img.u-max-full-width.cate_image_pc {
   height: 40px;
   text-align: center;
   vertical-align: middle;
-  margin: 25px 0;
+  margin: 20px 0;
   display: inline-block; }
   .back-button a {
     text-decoration: none;
@@ -306,7 +327,7 @@ img.u-max-full-width.cate_image_pc {
   height: 40px;
   text-align: center;
   vertical-align: middle;
-  margin: 25px 0;
+  margin: 20px 0;
   display: inline-block;
   float: right; }
   .next-button a {
@@ -346,20 +367,19 @@ img.u-max-full-width.cate_image_pc {
       display: block; } }
 #display_image {
   float: left;
-  width: 418px;
-  margin-right: 7px; }
+  width: 70%;
+  margin-right: 10px; }
   #display_image img {
     width: 100%; }
 
 #list_image {
-  width: 163px;
   list-style: none;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
   #list_image li {
-    width: 49%;
-    margin: 0px 0px 0px; }
+    width: 45%;
+    margin: 0 auto 5px; }
     #list_image li img {
       width: 100%;
       cursor: pointer; }
@@ -369,7 +389,8 @@ img.u-max-full-width.cate_image_pc {
     width: 100%; }
 
   #list_image {
-    width: 100%; }
+    width: 100%;
+    max-width: 280px; }
     #list_image li {
       display: inline-block;
       width: 18.5%; } }
@@ -437,7 +458,7 @@ img.u-max-full-width.cate_image_pc {
     border-top: 1px solid #e8e4da; } }
 .product_explain {
   margin-bottom: 20px;
-  padding: 20px 0; }
+  padding: 20px 0 50px 0; }
   .product_explain .product_explain_title {
     color: #887f69;
     font-weight: bold;
