@@ -57,17 +57,20 @@ header {
         .sp_menu_toggle {
             list-style: none;
             background-color: #ff6d77;
-            width: 98%;
-            position: right;
+            width: 100%;
             display: none;
             position: absolute;
-            left: 1%;
+            left: 0%;
 
             z-index: 100;
-
+            
+            
             li {
                 border-bottom: 1px solid $gray1;
-                margin-bottom: 0;
+                margin: 10px 20px;
+                padding: 5px 0 10px 5px;
+                
+                
                 a {
                     color: white;
                     text-decoration: none;
@@ -76,6 +79,10 @@ header {
 
                 }
             }
+            li:last-child {
+                border-bottom: none;
+            }
+
         }
         .sp_navi_list {
             width: 180px;
@@ -155,7 +162,7 @@ header {
             display: none;
         }
         h2.title_sp {
-            padding: 20px 0;
+            padding: 0 0 20px 0;
             margin: 0;
             clear: both;
             img {

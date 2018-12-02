@@ -26,21 +26,23 @@ header {
     header #header_in .sp_menu_toggle {
       list-style: none;
       background-color: #ff6d77;
-      width: 98%;
-      position: right;
+      width: 100%;
       display: none;
       position: absolute;
-      left: 1%;
+      left: 0%;
       z-index: 100; }
       header #header_in .sp_menu_toggle li {
         border-bottom: 1px solid #e2ddd4;
-        margin-bottom: 0; }
+        margin: 10px 20px;
+        padding: 5px 0 10px 5px; }
         header #header_in .sp_menu_toggle li a {
           color: white;
           text-decoration: none;
           padding: 5px;
           font-size: 13px;
           font-size: 1.3rem; }
+      header #header_in .sp_menu_toggle li:last-child {
+        border-bottom: none; }
     header #header_in .sp_navi_list {
       width: 180px;
       background-color: #887f69;
@@ -90,7 +92,7 @@ header {
     #main_area h2.title_pc {
       display: none; }
     #main_area h2.title_sp {
-      padding: 20px 0;
+      padding: 0 0 20px 0;
       margin: 0;
       clear: both; }
       #main_area h2.title_sp img {
